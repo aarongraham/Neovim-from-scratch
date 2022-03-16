@@ -41,6 +41,9 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "∆", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "˚", "<Esc>:m .-2<CR>==gi", opts)
 
+keymap("n", "J", "9j", opts)
+keymap("n", "K", "9k", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
