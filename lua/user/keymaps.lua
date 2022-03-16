@@ -19,6 +19,11 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Save and Load session
+keymap("n", "<F2>", ":mksession! .vim_session <cr>", opts)
+keymap("n", "<F3>", ":source .vim_session <cr>", opts)
+
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
