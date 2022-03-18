@@ -41,28 +41,33 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-keymap("n", "∆", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "˚", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("n", "∆", ":m .+1<CR>==", opts)
+keymap("n", "˚", ":m .-2<CR>==", opts)
 
+keymap("n", "<A-J>", ":join", opts)
 keymap("n", "J", "9j", opts)
 keymap("n", "K", "9k", opts)
 
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
-
+keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("i", "∆", "<Esc>:m .+1<CR>==gi", opts)
+keymap("i", "˚", "<Esc>:m .-2<CR>==gi", opts)
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "∆", ":m .+1<CR>==", opts)
-keymap("v", "˚", ":m .-2<CR>==", opts)
+
+keymap("v", "<A-j>", ":move '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":move '<-2<CR>gv=gv", opts)
+keymap("v", "∆", ":move '>+1<CR>gv=gv", opts)
+keymap("v", "˚", ":move '<-2<CR>gv=gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
