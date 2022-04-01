@@ -46,6 +46,7 @@ keymap("n", "∆", ":m .+1<CR>==", opts)
 keymap("n", "˚", ":m .-2<CR>==", opts)
 
 keymap("n", "<A-a>", ":join<CR>", opts)
+keymap("n", "Ô", ":join<CR>", opts)
 keymap("n", "J", "9j", opts)
 keymap("n", "K", "9k", opts)
 
