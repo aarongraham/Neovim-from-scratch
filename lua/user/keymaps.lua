@@ -46,8 +46,9 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 keymap("n", "∆", ":m .+1<CR>==", opts)
 keymap("n", "˚", ":m .-2<CR>==", opts)
 
-keymap("n", "<A-J>", ":join", opts)
+keymap("n", "<A-J>", ":join<CR>", opts)
 keymap("n", "J", "9j", opts)
+
 keymap("n", "K", "9k", opts)
 
 -- Insert --
