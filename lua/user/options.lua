@@ -48,4 +48,5 @@ vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
 -- Needed for some neovim gui programs
 vim.cmd('set guifont="JetBrains Mono NerdFont"')
 
-
+-- Save on buffer switch
+vim.cmd("set autowriteall")

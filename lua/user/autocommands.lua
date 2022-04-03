@@ -32,7 +32,6 @@ vim.cmd([[
 
 -- Save on app focus lost and buffer switch
 vim.cmd("au FocusLost * silent! wa")
-vim.cmd("set autowriteall")
 -- Autoformat
 -- augroup _lsp
 --   autocmd!
