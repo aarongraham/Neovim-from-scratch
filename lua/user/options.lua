@@ -48,6 +48,4 @@ vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
 -- Needed for some neovim gui programs
 vim.cmd('set guifont="JetBrains Mono NerdFont"')
 
--- Save on focus lost and buffer switch
-vim.cmd("au FocusLost * silent! wa")
-vim.cmd("set autowriteall")
+

@@ -40,7 +40,7 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
+	-- Chris@machine plugins
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
@@ -58,9 +58,13 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
+
+	-- My plugins
 	use("tpope/vim-abolish")
+	use("tpope/vim-surround")
 
 	-- Colorschemes
+	use("rktjmp/lush.nvim")
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
 	use("bluz71/vim-moonfly-colors")
@@ -68,6 +72,10 @@ return packer.startup(function(use)
 	use("mhartington/oceanic-next")
 	use("ChristianChiarulli/nvcode-color-schemes.vim")
 	use("glepnir/zephyr-nvim")
+	use("RRethy/nvim-base16")
+	use("briones-gabriel/darcula-solid.nvim")
+	use("shaunsingh/nord.nvim")
+	use("romainl/Apprentice")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin

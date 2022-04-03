@@ -1,6 +1,6 @@
 vim.cmd([[
 try
-  colorscheme nvcode
+  colorscheme darcula-solid
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
