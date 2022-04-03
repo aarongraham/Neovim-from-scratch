@@ -43,10 +43,10 @@ end
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
-vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
 
 -- Needed for some neovim gui programs
 vim.cmd('set guifont="JetBrains Mono NerdFont"')
 
--- Save on buffer switch
+-- Save on quit, window switch, etc
+vim.cmd("set autowrite")
 vim.cmd("set autowriteall")

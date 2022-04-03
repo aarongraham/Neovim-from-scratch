@@ -3,7 +3,7 @@ vim.cmd([[
     autocmd!
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR> 
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
-    autocmd BufWinEnter * :set formatoptions-=cro
+    autocmd BufWinEnter * :set formatoptions-=o
     autocmd FileType qf set nobuflisted
   augroup end
 
@@ -30,10 +30,13 @@ vim.cmd([[
   augroup end
 ]])
 
--- Save on app focus lost and buffer switch
+-- My autocommand additions
+-- Save on buffer switch
+vim.cmd([[
+  augroup AutoWrite
+    autocmd! BufLeave * silent! wall
+  augroup END
+]])
+
+-- Save on app focus lost
 vim.cmd("au FocusLost * silent! wa")
--- Autoformat
--- augroup _lsp
---   autocmd!
---   autocmd BufWritePre * lua vim.lsp.buf.formatting()
--- augroup end
