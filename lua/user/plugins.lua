@@ -62,6 +62,10 @@ return packer.startup(function(use)
 	-- My plugins
 	use("tpope/vim-abolish")
 	use("tpope/vim-surround")
+	use("unblevable/quick-scope")
+	use("filipdutescu/renamer.nvim")
+	use("Shatur/neovim-session-manager")
+	use("nvim-telescope/telescope-ui-select.nvim")
 
 	-- Colorschemes
 	use("rktjmp/lush.nvim")

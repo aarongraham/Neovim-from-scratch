@@ -92,6 +92,11 @@ telescope.setup({
 		--   extension_config_key = value,
 		-- }
 		-- please take a look at the readme of the extension you want to configure
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+    },
 		fzf = {
 			fuzzy = true, -- false will only do exact matching
 			override_generic_sorter = true, -- override the generic sorter
@@ -103,3 +108,4 @@ telescope.setup({
 })
 
 telescope.load_extension("fzf")
+telescope.load_extension("ui-select")
