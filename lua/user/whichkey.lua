@@ -85,7 +85,7 @@ local mappings = {
 		"Buffers",
 	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["w"] = { "<cmd>wall!<CR>", "Save" },
+	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>wq<CR>", "Quit" },
 	["Q"] = { "<cmd>qall<CR>", "Quit All" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -140,7 +140,7 @@ local mappings = {
 			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Format" },
+		f = { "<cmd>lua vim.lsp.buf.formatting_sync(nil, 1000)<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {

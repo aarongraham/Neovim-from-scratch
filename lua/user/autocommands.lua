@@ -34,9 +34,9 @@ vim.cmd([[
 -- Save on buffer switch
 vim.cmd([[
   augroup AutoWrite
-    autocmd! BufLeave * silent! wall
+    autocmd! BufLeave * silent! w
   augroup END
 ]])
 
 -- Save on app focus lost
-vim.cmd("au FocusLost * silent! wa")
+vim.cmd("au FocusLost * silent! w")

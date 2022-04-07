@@ -66,6 +66,8 @@ return packer.startup(function(use)
 	use("filipdutescu/renamer.nvim")
 	use("Shatur/neovim-session-manager")
 	use("nvim-telescope/telescope-ui-select.nvim")
+	use("tpope/vim-endwise")
+	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
 	-- Colorschemes
 	use("rktjmp/lush.nvim")

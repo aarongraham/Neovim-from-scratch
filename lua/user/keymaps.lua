@@ -7,8 +7,8 @@ local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- Modes
 --   normal_mode = "n",
@@ -68,7 +68,6 @@ keymap("v", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 keymap("v", "<A-j>", ":move '>+1<CR>gv=gv", opts)
 keymap("v", "∆", ":move '>+1<CR>gv=gv", opts)
 keymap("v", "˚", ":move '<-2<CR>gv=gv", opts)
-keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -81,3 +80,8 @@ keymap("x", "˚", ":move '<-2<CR>gv-gv", opts)
 
 -- Duplicate Below
 keymap("x", "<C-p>", "y'>p", opts)
+
+-- Don't yank on some commands
+keymap("v", "p", '"_dP', opts)
+keymap("x", "c", '"_c', opts)
+keymap("n", "c", '"_c', opts)
