@@ -88,9 +88,15 @@ M.on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false
 	end
 
-	-- if client.name == "elixirls" then
-	-- 	client.resolved_capabilities.document_formatting = false
-	-- end
+  -- this is defined both here and in the null-ls on_attach handler 
+	if client.resolved_capabilities.document_formatting then
+		vim.cmd([[
+	           augroup LspFormatting
+	               autocmd! * <buffer>
+	               autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)
+	           augroup END
+	           ]])
+	end
 
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
