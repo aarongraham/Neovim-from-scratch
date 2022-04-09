@@ -36,6 +36,11 @@ vim.cmd([[
   augroup AutoWrite
     autocmd! BufLeave * silent! w
   augroup END
+
+  augroup highlight_yank
+    au!
+    au TextYankPost * silent! lua vim.highlight.on_yank { timeout = 150 }
+  augroup END
 ]])
 
 -- Save on app focus lost
