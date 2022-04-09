@@ -67,7 +67,9 @@ return packer.startup(function(use)
 	use("Shatur/neovim-session-manager")
 	use("nvim-telescope/telescope-ui-select.nvim")
 	use("tpope/vim-endwise")
-	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
+	-- use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
+	use("RRethy/vim-illuminate")
+	use("ray-x/lsp_signature.nvim")
 
 	-- Colorschemes
 	use("rktjmp/lush.nvim")

@@ -75,7 +75,7 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(
 		bufnr,
 		"n",
-		"lg",
+		"gl",
 		'<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
 		opts
 	)
@@ -91,11 +91,21 @@ M.on_attach = function(client, bufnr)
 	-- this is defined both here and in the null-ls on_attach handler
 	if client.resolved_capabilities.document_formatting then
 		vim.cmd([[
-	           augroup LspFormatting
-	               autocmd! * <buffer>
-	               autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)
-	           augroup END
-	           ]])
+            augroup LspFormatting
+                autocmd! * <buffer>
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 2000)
+            augroup END
+            ]])
+	end
+
+	local status_ok, lsp_signature = pcall(require, "lsp_signature")
+	if status_ok then
+		lsp_signature.on_attach()
+	end
+
+	local status_ok, illuminate = pcall(require, "illuminate")
+	if status_ok then
+		illuminate.on_attach(client)
 	end
 
 	lsp_keymaps(bufnr)

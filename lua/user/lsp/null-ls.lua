@@ -9,23 +9,23 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-	debug = false,
+	debug = true,
 	sources = {
 		formatting.prettier.with({ extra_args = {} }),
-		formatting.black.with({ extra_args = { "--fast" } }),
-		-- formatting.mix,
-		formatting.stylua,
 		diagnostics.eslint,
-		-- diagnostics.flake8
+		-- formatting.mix, -- formatting using elixir ls is way faster
+		-- diagnostics.cspell,
+		diagnostics.credo,
+		formatting.stylua,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
 			vim.cmd([[
-            augroup LspFormatting
-                autocmd! * <buffer>
-                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)
-            augroup END
-            ]])
+		          augroup LspFormatting
+		              autocmd! * <buffer>
+		              autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 2000)
+		          augroup END
+		          ]])
 		end
 	end,
 })
