@@ -70,6 +70,7 @@ return packer.startup(function(use)
 	-- use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 	use("RRethy/vim-illuminate")
 	use("ray-x/lsp_signature.nvim")
+	use("tpope/vim-fugitive")
 
 	-- Colorschemes
 	use("rktjmp/lush.nvim")
