@@ -176,6 +176,14 @@ local mappings = {
 	},
 
 	t = {
+		name = "Test",
+		f = { "<cmd>Ultest<cr>", "Run tests in file" },
+		t = { "<cmd>UltestNearest<cr>", "Run this test" },
+		o = { "<cmd>UltestOutput<cr>", "Show this test output" },
+		s = { "<cmd>UltestSummaryOpen!<cr>", "Summary" },
+		c = { "<cmd>UltestSummaryClose<cr>", "Close Summary" },
+	},
+	n = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 		e = { "<cmd>lua _IEX_TOGGLE()<cr>", "IEx" },
