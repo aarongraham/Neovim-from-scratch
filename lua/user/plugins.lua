@@ -72,7 +72,6 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
 	use("inside/vim-search-pulse")
 	use("ellisonleao/glow.nvim")
-	use("sunjon/shade.nvim")
 	use("machakann/vim-sandwich")
 	use("echasnovski/mini.nvim")
 
