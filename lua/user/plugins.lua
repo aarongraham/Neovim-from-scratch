@@ -71,6 +71,9 @@ return packer.startup(function(use)
 	use("RRethy/vim-illuminate")
 	use("ray-x/lsp_signature.nvim")
 	use("tpope/vim-fugitive")
+	use("inside/vim-search-pulse")
+	use("ellisonleao/glow.nvim")
+	use("sunjon/shade.nvim")
 
 	-- Colorschemes
 	use("rktjmp/lush.nvim")
