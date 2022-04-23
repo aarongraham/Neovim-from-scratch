@@ -74,6 +74,7 @@ return packer.startup(function(use)
 	use("ellisonleao/glow.nvim")
 	use("machakann/vim-sandwich")
 	use("echasnovski/mini.nvim")
+	use("nvim-treesitter/nvim-treesitter-textobjects")
 
 	-- Colorschemes
 	use("rktjmp/lush.nvim")

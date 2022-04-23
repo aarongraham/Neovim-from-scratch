@@ -57,6 +57,7 @@ keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("i", "∆", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "˚", "<Esc>:m .-2<CR>==gi", opts)
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
