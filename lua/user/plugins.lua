@@ -78,10 +78,19 @@ return packer.startup(function(use)
 	use("wellle/targets.vim")
 	use("sudormrfbin/cheatsheet.nvim")
 	use("sindrets/diffview.nvim")
-	use("chentau/marks.nvim")
+	use("chentoast/marks.nvim")
 	use("folke/trouble.nvim")
 	use("kevinhwang91/nvim-bqf")
 	use("beauwilliams/focus.nvim")
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
+	})
 	-- Colorschemes
 	use("rktjmp/lush.nvim")
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
