@@ -10,7 +10,7 @@ local options = {
 	mouse = "a", -- allow the mouse to be used in neovim
 	pumheight = 10, -- pop up menu height
 	showmode = false, -- we don't need to see things like -- INSERT -- anymore
-	showtabline = 2, -- always show tabs
+	showtabline = 1, -- show tabs if > 1
 	smartcase = true, -- smart case
 	smartindent = true, -- make indenting smarter again
 	splitbelow = true, -- force all horizontal splits to go below current window
@@ -32,7 +32,7 @@ local options = {
 	wrap = false, -- display lines as one long line
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
-	guifont = "monospace:h17", -- the font used in graphical neovim applications
+	guifont = "JetBrains Mono NerdFont", -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append("c")
@@ -43,9 +43,6 @@ end
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
-
--- Needed for some neovim gui programs
-vim.cmd('set guifont="JetBrains Mono NerdFont"')
 
 -- Save on quit, window switch, etc
 vim.cmd("set autowrite")

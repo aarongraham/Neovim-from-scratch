@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	-- use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-	use("akinsho/bufferline.nvim")
+	-- use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
 	use("akinsho/toggleterm.nvim")
@@ -78,7 +78,10 @@ return packer.startup(function(use)
 	use("wellle/targets.vim")
 	use("sudormrfbin/cheatsheet.nvim")
 	use("sindrets/diffview.nvim")
-
+	use("chentau/marks.nvim")
+	use("folke/trouble.nvim")
+	use("kevinhwang91/nvim-bqf")
+	use("beauwilliams/focus.nvim")
 	-- Colorschemes
 	use("rktjmp/lush.nvim")
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out

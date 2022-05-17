@@ -72,7 +72,7 @@ configs.setup({
 			init_selection = "<cr>",
 			node_incremental = "<cr>",
 			scope_incremental = "grc",
-			node_decremental = ";",
+			node_decremental = "<bs>",
 		},
 	},
 	textobjects = {
