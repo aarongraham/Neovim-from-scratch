@@ -3,4 +3,4 @@ if not status_ok then
 	return
 end
 
-mini_comment.setup()
+-- mini_comment.setup()
