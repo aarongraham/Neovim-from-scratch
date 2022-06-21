@@ -195,8 +195,12 @@ local mappings = {
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 	x = {
-		name = "Trouble",
+		name = "Files",
 		x = { "<cmd>Trouble<cr>", "Toggle" },
+		p = { '<cmd>let @+=expand("%")<cr>', "Copy relative path" },
+		P = { '<cmd>let @+=expand("%:p")<cr>', "Copy absolute path" },
+		f = { '<cmd>let @+=expand("%:t")<cr>', "Copy filename" },
+		F = { '<cmd>let @+=expand("%:p:h")<cr>', "Copy directory" },
 	},
 }
 
