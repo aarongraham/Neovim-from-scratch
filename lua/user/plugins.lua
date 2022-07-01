@@ -66,14 +66,12 @@ return packer.startup(function(use)
 	use("Shatur/neovim-session-manager")
 	use("nvim-telescope/telescope-ui-select.nvim")
 	use("tpope/vim-endwise")
-	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 	use("RRethy/vim-illuminate")
 	use("ray-x/lsp_signature.nvim")
 	use("tpope/vim-fugitive")
 	use("inside/vim-search-pulse")
 	use("ellisonleao/glow.nvim")
 	use("machakann/vim-sandwich")
-	use("echasnovski/mini.nvim")
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("wellle/targets.vim")
 	use("sudormrfbin/cheatsheet.nvim")
@@ -91,6 +89,24 @@ return packer.startup(function(use)
 			"MunifTanjim/nui.nvim",
 		},
 	})
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+			"haydenmeade/neotest-jest",
+		},
+	})
+
+	-- This needed me to install sqlite3 from homebrew x86. Then `mkdir -p ~/.local/share/nvim/databases/`
+	use({ "tami5/sqlite.lua" })
+	use("nvim-telescope/telescope-smart-history.nvim")
+	use({
+		"nvim-telescope/telescope-frecency.nvim",
+		requires = { "tami5/sqlite.lua" },
+	})
+
 	-- Colorschemes
 	use("rktjmp/lush.nvim")
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
@@ -99,11 +115,11 @@ return packer.startup(function(use)
 	use("tanvirtin/monokai.nvim")
 	use("mhartington/oceanic-next")
 	use("ChristianChiarulli/nvcode-color-schemes.vim")
-	use("glepnir/zephyr-nvim")
 	use("RRethy/nvim-base16")
 	use("briones-gabriel/darcula-solid.nvim")
 	use("shaunsingh/nord.nvim")
 	use("romainl/Apprentice")
+	use("shaunsingh/solarized.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin

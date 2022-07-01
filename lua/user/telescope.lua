@@ -5,6 +5,9 @@ end
 
 local actions = require("telescope.actions")
 
+-- Setup sqlite3
+vim.cmd([[ let g:sqlite_clib_path = '/usr/local/homebrew/opt/sqlite/lib/libsqlite3.dylib' ]])
+
 telescope.setup({
 	defaults = {
 
@@ -76,6 +79,11 @@ telescope.setup({
 				["?"] = actions.which_key,
 			},
 		},
+
+		history = {
+			path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
+			limit = 100,
+		},
 	},
 	pickers = {
 		-- Default configuration for builtin pickers goes here:
@@ -92,11 +100,11 @@ telescope.setup({
 		--   extension_config_key = value,
 		-- }
 		-- please take a look at the readme of the extension you want to configure
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown {
-        -- even more opts
-      }
-    },
+		["ui-select"] = {
+			require("telescope.themes").get_dropdown({
+				-- even more opts
+			}),
+		},
 		fzf = {
 			fuzzy = true, -- false will only do exact matching
 			override_generic_sorter = true, -- override the generic sorter
@@ -109,3 +117,5 @@ telescope.setup({
 
 telescope.load_extension("fzf")
 telescope.load_extension("ui-select")
+telescope.load_extension("smart_history")
+telescope.load_extension("frecency")
