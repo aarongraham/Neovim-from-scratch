@@ -90,14 +90,14 @@ local mappings = {
 	["Q"] = { "<cmd>qall<CR>", "Quit All" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	["f"] = {
-		"<cmd>lua require('telescope').extensions.frecency.frecency()<cr>",
-		"Find files",
-	},
 	-- ["f"] = {
-	-- 	"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{})<cr>",
+	-- 	"<cmd>lua require('telescope').extensions.frecency.frecency()<cr>",
 	-- 	"Find files",
 	-- },
+	["f"] = {
+		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{})<cr>",
+		"Find files",
+	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
